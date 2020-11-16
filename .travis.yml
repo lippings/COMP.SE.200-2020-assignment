@@ -1,1 +1,21 @@
 language: node_js
+node_js:
+ - 7
+
+cache: npm
+
+notifications:
+  email: false
+
+# command to install dependencies
+install:
+    - "npm install --save-dev mocha"
+    - "npm install --save-dev chai"
+
+# command to run tests
+script:
+#    - "travis_wait nosetests --with-coverage --cover-erase --nocapture --cover-package=dcase_util -v -w tests/"
+    - "npm test"
+
+after_success:
+    - "coveralls"
