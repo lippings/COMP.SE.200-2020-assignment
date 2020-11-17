@@ -4,18 +4,23 @@ node_js:
 
 cache: npm
 
+env:
+  global:
+    - COVERALLS_PARALLEL=true
+  
+jobs:
+  include:
+    - script: COVERALLS_FLAG_NAME=test-1 make test-coveralls-1
+    - script: COVERALLS_FLAG_NAME=test-2 make test-coveralls-2
+
 notifications:
   email: false
+  webhooks: https://coveralls.io/webhook
 
 # command to install dependencies
-install:
-    - "npm install --save-dev mocha"
-    - "npm install --save-dev chai"
+install: "npm install"
 
 # command to run tests
-script:
-#    - "travis_wait nosetests --with-coverage --cover-erase --nocapture --cover-package=dcase_util -v -w tests/"
-    - "npm test"
+script: "npm test"
 
-after_success:
-    - "coveralls"
+after_success: "npm run coveralls"
