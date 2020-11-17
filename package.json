@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "nyc mocha",
-    "coverage": "nyc report",
+    "test": "nyc mocha --exit",
+    "coverage": "nyc report --reporter=text-lcov",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": "",
