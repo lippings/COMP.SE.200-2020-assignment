@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lippings/COMP.SE.200-2020-assignment.svg?branch=master)](https://travis-ci.org/lippings/COMP.SE.200-2020-assignment) [![Coverage Status](https://coveralls.io/repos/github/lippings/COMP.SE.200-2020-assignment/badge.svg?branch=master)](https://coveralls.io/github/lippings/COMP.SE.200-2020-assignment?branch=master)
+
 # Student template
 
 ## Purpose of this repository
