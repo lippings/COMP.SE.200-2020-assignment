@@ -1,0 +1,10 @@
+{
+    "all": true,
+    "instrument": true,
+    "include": [
+        "src/*.js"
+    ],
+    "exclude": [
+        "src/.internal/*"
+    ]
+}
