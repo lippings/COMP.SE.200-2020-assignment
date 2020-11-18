@@ -10,4 +10,4 @@ install: "npm install"
 # command to run tests
 script: "npm test"
 
-after_success: "npm run coveralls"
+after_script: "npm run coveralls"
