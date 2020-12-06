@@ -11,7 +11,7 @@ describe('At', () => {
             'b': 2,
             'c': 3,
             'd': 4 
-        }
+        };
 
         it('Should return one path correctly', () => {
             const result = at(obj, 'a');
@@ -60,7 +60,7 @@ describe('At', () => {
             'b': [{ 'b0': { 'b00': 2 }}, { 'b1': true }],
             'c': undefined,
             'key': 4 
-        }
+        };
 
         it('Should return one path correctly', () => {
             const result = at(obj, 'a');
@@ -103,7 +103,7 @@ describe('At', () => {
             'b': 2,
             'c': 3,
             'd': 4 
-        }
+        };
 
         it('Path not defined', () => {
             const result = at(obj, 'e');

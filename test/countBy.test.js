@@ -6,18 +6,18 @@ describe('CountBy', () => {
     describe('Simple object', () => {
         const str = 'test';
         const arr = [ 1, 1, 1 ];
-        const func = ( a ) => { return a }
+        const func = ( a ) => { return a };
         const obj = { 
             'a': true,
             'b': true,
             'c': false,
             'd': false 
-        }
+        };
         const users = [
             { 'user': 'barney', 'active': true },
             { 'user': 'betty', 'active': true },
             { 'user': 'fred', 'active': false }
-        ]
+        ];
 
         it('Iterating through an array', () => {
             const result = countBy(arr, func);
@@ -41,18 +41,18 @@ describe('CountBy', () => {
 
     describe('Complex object', () => {
         const str = 'we are doing testing';
-        const func = ( a ) => { return a }
+        const func = ( a ) => { return a };
         const obj = { 
             'a': 'test',
             'b': [{ 'b0': { 'b00': 2 }}, { 'b1': true }],
             'c': undefined,
             'key': 'test'
-        }
+        };
         const users = [
             { 'user': 'barney', 'active': true },
             { 'user': 'betty', 'active': true },
             { 'user': 'fred', 'active': false }
-        ]
+        ];
 
         it('Iterating through an array', () => {
             const result = countBy(users, value => value.active);
@@ -79,8 +79,8 @@ describe('CountBy', () => {
         const nbr = 1000;
         const bool = false;
         const str = 'test';
-        const func = ( a ) => { return a }
-        const funcErr = ( a ) => { return b }
+        const func = ( a ) => { return a };
+        const funcErr = ( a ) => { return b };
 
         it('Iteratee not given', () => {
             expect(() => countBy(str)).to.throw('iteratee is not a function');

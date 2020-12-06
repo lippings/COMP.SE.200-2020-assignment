@@ -4,14 +4,14 @@ import isArrayLikeObject from '../src/isArrayLikeObject.js';
 
 describe('IsArrayLikeObject', () => {
     describe('Basic Functionality', () => {
-        const arr = [1, 2, 3]
+        const arr = [1, 2, 3];
         const obj = {
             'a': 1,
             'b': 2
-        }
+        };
         function arrLike() {
             this.push('test');
-        }
+        };
         arrLike.prototype = [];
         const arrLikeObject = new arrLike();
 
