@@ -3,7 +3,7 @@ const expect = chai.expect;
 import isArrayLikeObject from '../src/isArrayLikeObject.js';
 
 describe('IsArrayLikeObject', () => {
-    describe('Basic Functionality', () => {
+    describe('Basic functionality', () => {
         const arr = [1, 2, 3];
         const obj = {
             'a': 1,
