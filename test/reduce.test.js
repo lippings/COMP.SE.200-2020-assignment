@@ -11,7 +11,8 @@ describe('Reduce', () => {
             'a': 1,
             'b': 2,
             'c': 3,
-            'd': 4 }
+            'd': 4 
+        }
 
         it('Iterating through an array', () => {
             const result = reduce(arr, func, 0);
@@ -55,16 +56,18 @@ describe('Reduce', () => {
             'a': 'test',
             'b': [{ 'b0': { 'b00': 2 }}, { 'b1': true }],
             'c': undefined,
-            'key': 4 }
+            'key': 4 
+        }
         const func2 = (result, value, key) => {
             (result[value] || (result[value] = [])).push(key)
-            return result }
-
+            return result 
+        }
         const bool = false;
         const arr = [ str, obj, bool ];
         const func3 = ( a, b ) => {
             a.push(typeof(b));
-            return a }
+            return a 
+        }
 
         it('Iterating through a string', () => {
             const result = reduce(str, func1, 0);
@@ -93,6 +96,7 @@ describe('Reduce', () => {
         const bool = false;
         const str = 'test';
         const func = ( a, b ) => { return a + b }
+        const funcErr = ( a, b ) => { return a + c }
 
         it('Iteratee not given', () => {
             expect(() => reduce(str)).to.throw('iteratee is not a function');
@@ -118,6 +122,9 @@ describe('Reduce', () => {
 
             expect(result).to.be.a('Array');
             expect(result.length).to.equal(0);
+        });
+        it('Faulty function', () => {
+            expect(() => reduce(str, funcErr, '')).to.throw('c is not defined');
         });
     });
 });
