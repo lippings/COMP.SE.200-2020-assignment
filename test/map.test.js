@@ -115,26 +115,6 @@ describe('Map', () => {
             expect(result.length).to.equal(1);
             expect(result[0]).to.be.undefined;
         });
-        /*
-        it('Number instead of an object', () => {
-            const result = map(nbr, func, 0);
-
-            expect(result).to.be.a('Number');
-            expect(result).to.equal(0);
-        });
-        it('Boolean instead of an object', () => {
-            const result = map(bool, func, {});
-
-            expect(result).to.be.a('Object');
-            expect(Object.keys(result).length).to.equal(0);
-        });
-        it('Function instead of an object', () => {
-            const result = map(func, func, []);
-
-            expect(result).to.be.a('Array');
-            expect(result.length).to.equal(0);
-        });
-        */
         it('Faulty function', () => {
             expect(() => map(str, funcErr)).to.throw('c is not defined');
         });
